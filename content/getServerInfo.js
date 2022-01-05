@@ -1,5 +1,5 @@
 // identify server that hosts the current album
-machineID = window.location.href.match(/(?<=\/server\/)\w+/g)[0];
+machineID = window.location.href.match(/(?<=\/media\/)\w+/g)[0];
 user = JSON.parse(window.localStorage.users).users.filter(user => typeof user.authToken !== 'undefined')[0];
 server = user.servers.filter(server => server.machineIdentifier === machineID)[0];
 
