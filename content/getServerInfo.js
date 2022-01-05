@@ -18,7 +18,7 @@ urlParamPart.split("&").forEach(function (part) {
 });
 
 // the path to use to lookup info like download path etc.
-detailsPath = decodeURIComponent(params.get("key"));
+detailsPath = "/library/sections/" + decodeURIComponent(params.get("source")) + "/all";
 if (detailsPath.includes("library/metadata"))
     detailsPath += "/children";
 else if (detailsPath.includes("playlists"))
